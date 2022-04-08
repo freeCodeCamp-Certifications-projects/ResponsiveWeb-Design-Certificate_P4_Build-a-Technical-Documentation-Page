@@ -10,14 +10,21 @@
 </head>
 
 <body>
-    <nav id="navbar">
-        <header></header>
-        <a href="#What_is_HTML_?" class="nav-link">What is HTML ?</a>
-        <a href="#Anatomy_of_an_HTML_element" class="nav-link">Anatomy of an HTMl element</a>
-        <a href="#Attributes" class="nav-link">Attributes</a>
-        <a href="#Anatomy_of_an_HTML_document" class="nav-link">Anatomy of an HTML document</a>
-        <a href="#HTML_comments" class="nav-link">HTML comments</a>
+    <div>
+        <button class="index">Index</button>
+    </div>
+    <nav id="navbar" class="navbar">
+        <header id="pageTitle">Basics of HTML</header>
+        <div id="nav-links">
+            <a href="#What_is_HTML_?" class="nav-link">What is HTML ?</a>
+            <a href="#Anatomy_of_an_HTML_element" class="nav-link">Anatomy of an HTML element</a>
+            <a href="#Attributes" class="nav-link">Attributes</a>
+            <a href="#Anatomy_of_an_HTML_document" class="nav-link">Anatomy of an HTML document</a>
+            <a href="#HTML_comments" class="nav-link">HTML comments</a>
+        </div>
     </nav>
+
+
     <main id="main-doc">
         <section class="main-section" id="What_is_HTML_?">
             <header>What is HTML ?</header>
@@ -78,39 +85,41 @@
             <header>Anatomy of an HTML document</header>
             <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements
                 combine to form an entire HTML page:</p>
-            <code>
-                <code>&lt;!DOCTYPE html&gt;<br>
-                <code>&lt;html&gt;<br>
-                <code>&lt;head&gt;<br>
-                <code> &lt;meta charset="utf-8"&gt;<br>
-                <code>&lt;title&gt;My test page&lt;/title&gt;<br>
-                <code>&lt;/head&gt;<br>
-                <code>&lt;body&gt;<br>
-                <code>&lt;p&gt;This is my page&lt;/p&gt;<br>
-                <code>&lt;/body&gt;<br>
-                <code>&lt;/html&gt;<br>
+            <div class="codeBlock">
+                <code>
+                <p>&lt;!DOCTYPE html&gt;</p>
+                <p>&lt;html&gt;</p>
+               <p> &lt;head&gt;</p>
+                <p>&lt;meta charset="utf-8"&gt;</p>
+                <p>&lt;title&gt;My test page&lt;/title&gt;</p>
+                <p>&lt;/head&gt;</p>
+                <p>&lt;body&gt;</p>
+                <p>&lt;p&gt;This is my page&lt;/p&gt;</p>
+                <p>&lt;/body&gt;</p>
+                <p>&lt;/html&gt;</p>
                 </code>
+            </div>
             <p>Here we have:</p>
             <ol>
                 <li>
-                    <code>&lt;!DOCTYPE html&gt;:
-                </code> The doctype. When HTML was young (1991-1992), doctypes were meant to act as
+                    <code>&lt;!DOCTYPE html&gt;
+                </code>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as
                     links to a set of rules that the HTML page had to follow to be considered good HTML.
                 </li>
-                <li><code>&lt;html&gt;&lt;/html&gt;:</code> The &lt;html&gt; element. This element wraps all
+                <li><code>&lt;html&gt;&lt;/html&gt;</code>: The &lt;html&gt; element. This element wraps all
                     the content on the page.
                     It is sometimes known as the root element.</li>
-                <li><code>&lt;head&gt;&lt;/head&gt;:</code> The &lt;head&gt; element. This element acts as a
+                <li><code>&lt;head&gt;&lt;/head&gt;</code>: The &lt;head&gt; element. This element acts as a
                     container for everything you want to include on the HTML page, that isn't the content the page will
                     show
                     to viewers. </li>
-                <li><code>&lt;meta charset="utf-8"&gt;:</code> The &lt;meta&gt; element. This element
+                <li><code>&lt;meta charset="utf-8"&gt;</code>: The &lt;meta&gt; element. This element
                     represents metadata that cannot
                     be represented by other HTML meta-related elements, like &lt;base&gt;, &lt;link&gt;, &lt;script&gt;,
                     &lt;style&gt; or &lt;title&gt;.</li>
-                <li><code>&lt;title&gt;&lt;/title&gt;:</code> The &lt;title&gt; element. This sets the title of
+                <li><code>&lt;title&gt;&lt;/title&gt;</code>: The &lt;title&gt; element. This sets the title of
                     the page, which is the title that appears in the browser tab the page is loaded in. </li>
-                <li><code>&lt;body&gt;&lt;/body&gt;:</code> The &lt;body&gt; element. This contains all the
+                <li><code>&lt;body&gt;&lt;/body&gt;</code>: The &lt;body&gt; element. This contains all the
                     content that displays on the page, including text, images, videos, games, playable audio tracks, or
                     whatever else.</li>
             </ol>
@@ -124,18 +133,22 @@
                 changes and updates.
                 To write an HTML comment, wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code>.
                 For example:</p>
-            <code>
-                &lt;p&gt;I'm not inside a comment&lt;/p&gt; <br>
-                &lt;!--&gt; &lt;p&gt;I am!&lt;/p&gt; &lt;--&gt;
+            <div class="codeBlock">
+                <code>
+                <p>&lt;p&gt;I'm not inside a comment&lt;/p&gt;</p> 
+                <p>&lt;!--&gt; &lt;p&gt;I am!&lt;/p&gt; &lt;--&gt;</p>
                     </code>
+                </div>
         </section>
-        <footer>
-            <a
-                href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#nesting_elements">for
-                more informatios visit the <b>mdn web docs</b> by Mozilla foundation</a>
-        </footer>
-    </main>
 
+    </main>
+    <footer>
+        <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#nesting_elements">for
+            more informatios visit the <b>mdn web docs</b> by Mozilla foundation</a>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
