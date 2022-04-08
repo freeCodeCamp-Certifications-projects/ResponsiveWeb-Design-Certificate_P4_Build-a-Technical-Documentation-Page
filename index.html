@@ -1,12 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Build a Technical Documentation Page</title>
 </head>
+
 <body>
-    
+    <nav id="navbar">
+        <header></header>
+        <a href="#What_is_HTML_?" class="nav-link">What is HTML ?</a>
+        <a href="#Anatomy_of_an_HTML_element" class="nav-link">Anatomy of an HTMl element</a>
+        <a href="#Attributes" class="nav-link">Attributes</a>
+        <a href="#Anatomy_of_an_HTML_document" class="nav-link">Anatomy of an HTML document</a>
+        <a href="#HTML_comments" class="nav-link">HTML comments</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="What_is_HTML_?">
+            <header>What is HTML ?</header>
+            <p>HTML (Hypertext Markup Language) is a markup language that tells web browsers how to structure the web
+                pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML
+                consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content
+                to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to
+                connect to another page, italicize words, and so on. For example, consider the following line of text:
+            </p>
+            <code>My cat is very grumpy</code>
+            <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a
+                paragraph (&lt;p&gt;) element:</p>
+            <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+        </section>
+        <section class="main-section" id="Anatomy_of_an_HTML_element">
+            <header>Anatomy of an HTML element</header>
+            <p>Let's further explore our paragraph element from the previous section:</p>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
+                alt="the componets of an elements: content of the element between an opening and a closing tag">
+            <p>The anatomy of our element is:</p>
+            <ul>
+                <li><b>opening tag:</b> This consists of the name of the element (in this example, p for paragraph),
+                    wrapped in opening and closing angle brackets. This opening tag marks where the element begins or
+                    starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                <li><b>The content:</b> This is the content of the element. In this example, it is the paragraph text.
+                </li>
+                <li><b>The closing tag:</b> This is the same as the opening tag, except that it includes a forward slash
+                    before
+                    the element name. This marks where the element ends. Failing to include a closing tag is a common
+                    beginner error that can produce peculiar results.</li>
+            </ul>
+            <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+            <h3>Nesting elements</h3>
+            <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat
+                is very grumpy, we could wrap the word very in a &lt;strong&gt; element, which means that the word is to
+                have strong(er) text formatting:</p>
+            <code> &lt;p&gt; My cat is <strong>very</strong> grumpy.&lt;/p&gt;</code>
+            <p>The <strong>have to open and close in a way that they are inside or outside one another</strong>. With
+                the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing
+                can result in unexpected results.</p>
+        </section>
+        <section class="main-section" id="Attributes">
+            <header>Attributes</header>
+            <p>Elements can also have attributes.Attributes contain extra information about the element that won't
+                appear in the content. In this example, the <strong>class</strong> attribute is an identifying name used
+                to target the element with style information. </p>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png"
+                alt="attribute added inside the opening tag">
+            <p>An attribute should have:</p>
+            <ul>
+                <li>A space between it and the element name. (For an element with more than one attribute, the
+                    attributes should be separated by spaces too.)</li>
+                <li>The attribute name, followed by an equal sign.</li>
+                <li>An attribute value, wrapped with opening and closing quote marks.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Anatomy_of_an_HTML_document">
+            <header>Anatomy of an HTML document</header>
+            <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements
+                combine to form an entire HTML page:</p>
+            <code>
+                <code>&lt;!DOCTYPE html&gt;<br>
+                <code>&lt;html&gt;<br>
+                <code>&lt;head&gt;<br>
+                <code> &lt;meta charset="utf-8"&gt;<br>
+                <code>&lt;title&gt;My test page&lt;/title&gt;<br>
+                <code>&lt;/head&gt;<br>
+                <code>&lt;body&gt;<br>
+                <code>&lt;p&gt;This is my page&lt;/p&gt;<br>
+                <code>&lt;/body&gt;<br>
+                <code>&lt;/html&gt;<br>
+                </code>
+            <p>Here we have:</p>
+            <ol>
+                <li>
+                    <code>&lt;!DOCTYPE html&gt;:
+                </code> The doctype. When HTML was young (1991-1992), doctypes were meant to act as
+                    links to a set of rules that the HTML page had to follow to be considered good HTML.
+                </li>
+                <li><code>&lt;html&gt;&lt;/html&gt;:</code> The &lt;html&gt; element. This element wraps all
+                    the content on the page.
+                    It is sometimes known as the root element.</li>
+                <li><code>&lt;head&gt;&lt;/head&gt;:</code> The &lt;head&gt; element. This element acts as a
+                    container for everything you want to include on the HTML page, that isn't the content the page will
+                    show
+                    to viewers. </li>
+                <li><code>&lt;meta charset="utf-8"&gt;:</code> The &lt;meta&gt; element. This element
+                    represents metadata that cannot
+                    be represented by other HTML meta-related elements, like &lt;base&gt;, &lt;link&gt;, &lt;script&gt;,
+                    &lt;style&gt; or &lt;title&gt;.</li>
+                <li><code>&lt;title&gt;&lt;/title&gt;:</code> The &lt;title&gt; element. This sets the title of
+                    the page, which is the title that appears in the browser tab the page is loaded in. </li>
+                <li><code>&lt;body&gt;&lt;/body&gt;:</code> The &lt;body&gt; element. This contains all the
+                    content that displays on the page, including text, images, videos, games, playable audio tracks, or
+                    whatever else.</li>
+            </ol>
+        </section>
+        <section class="main-section" id="HTML_comments">
+            <header>HTML comments</header>
+            <p>HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments
+                invisible to the user. The purpose of comments is to allow you to include notes in the code to explain
+                your logic or coding. This is very useful if you return to a code base after being away for long enough
+                that you don't completely remember it. Likewise, comments are invaluable as different people are making
+                changes and updates.
+                To write an HTML comment, wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code>.
+                For example:</p>
+            <code>
+                &lt;p&gt;I'm not inside a comment&lt;/p&gt; <br>
+                &lt;!--&gt; &lt;p&gt;I am!&lt;/p&gt; &lt;--&gt;
+                    </code>
+        </section>
+        <footer>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#nesting_elements">for
+                more informatios visit the <b>mdn web docs</b> by Mozilla foundation</a>
+        </footer>
+    </main>
+
 </body>
+
 </html>
